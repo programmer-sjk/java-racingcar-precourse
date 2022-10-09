@@ -2,7 +2,6 @@ package racingcar.view;
 
 import racingcar.constant.CarStatus;
 import racingcar.domain.Car;
-import racingcar.domain.CarDistance;
 import racingcar.domain.Cars;
 
 import java.util.List;
@@ -46,7 +45,7 @@ public class Output {
         }
     }
 
-    public static void printRaceWinner(CarDistance carDistance) {
-        System.out.println(WINNER_STRING + String.join(COMMA_JOIN_STRING, carDistance.winner()));
+    public static void printRaceWinner(List<String> winners) {
+        System.out.println(WINNER_STRING + String.join(COMMA_JOIN_STRING, winners));
     }
 }

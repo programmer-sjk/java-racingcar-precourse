@@ -1,7 +1,6 @@
 package racingcar.controller;
 
 import racingcar.domain.Car;
-import racingcar.domain.CarDistance;
 import racingcar.domain.Cars;
 import racingcar.domain.Race;
 import racingcar.view.Common;
@@ -22,9 +21,8 @@ public class RaceController {
 
         race.start(tryRound);
 
-        CarDistance carDistance = race.result();
         Output.showRaceResult(tryRound, race.getRacingCars());
-        Output.printRaceWinner(carDistance);
+        Output.printRaceWinner(race.winner());
     }
 
     private Cars getCars() {
