@@ -20,9 +20,11 @@ public class RaceController {
         Race race = new Race(getCars());
         int tryRound = getTryRound();
 
-        start(race, tryRound);
+        race.start(tryRound);
 
-        result(tryRound, race.result());
+        CarDistance carDistance = race.result();
+        Output.showRaceResult(tryRound, race.getRacingCars());
+        Output.printRaceWinner(carDistance);
     }
 
     private Cars getCars() {
@@ -53,14 +55,5 @@ public class RaceController {
             Common.printError(e.getMessage());
             return getTryRound();
         }
-    }
-
-    private void start(Race race, int tryRound) {
-        race.start(tryRound);
-    }
-
-    private void result(int tryRound, CarDistance carDistance) {
-        Output.showRaceResult(tryRound, carDistance);
-        Output.printRaceWinner(carDistance);
     }
 }

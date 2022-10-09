@@ -15,6 +15,10 @@ public class Race {
         racingCars = cars;
     }
 
+    public Cars getRacingCars() {
+        return racingCars;
+    }
+
     public void start(int tryRound) {
         validate(tryRound);
 

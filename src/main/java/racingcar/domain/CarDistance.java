@@ -14,14 +14,6 @@ public class CarDistance {
         this.carDistance = carDistance;
     }
 
-    public List<String> getCarNames() {
-        return new ArrayList<>(carDistance.keySet());
-    }
-
-    public List<Boolean> distancesByName(String name) {
-        return this.carDistance.get(name);
-    }
-
     public List<String> winner() {
         Map<String, Integer> carMove = new HashMap<>();
         for (String name : carDistance.keySet()) {

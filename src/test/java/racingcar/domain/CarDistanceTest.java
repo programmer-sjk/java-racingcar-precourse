@@ -28,19 +28,6 @@ public class CarDistanceTest {
         distances = new CarDistance(carDistance);
     }
 
-    @DisplayName("자동차 이름을 구할 수 있다")
-    @Test
-    void 자동차_이름_테스트() {
-        assertThat(distances.getCarNames()).containsExactly(WINNER_NAME, LOSER_NAME);
-    }
-
-    @DisplayName("자동차 이름으로 이동한 배열을 구할 수 있다")
-    @Test
-    void 자동차_이동거리_배열_테스트() {
-        List<Boolean> winnerDistances = distances.distancesByName(WINNER_NAME);
-        assertThat(winnerDistances.get(FIRST_DISTANCE)).isTrue();
-    }
-
     @DisplayName("승자를 알 수 있다")
     @Test
     void 승자_테스트() {
