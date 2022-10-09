@@ -8,13 +8,14 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
-public class CarsTest {
-    @DisplayName("자동차 이름은 중복되면 안 된다")
+public class RaceTest {
+    @DisplayName("레이스의 시도 횟수는 0보다 커야 한다")
     @Test
-    void 자동차_이름_중복_예외_테스트() {
+    void 시도횟수_예외_테스트() {
         assertThatThrownBy(() -> {
-            new Cars(Arrays.asList(new Car("차"), new Car("차")));
+            Cars cars = new Cars(Arrays.asList(new Car("차")));
+            new Race(cars).start(0);
         }).isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(Error.DUPLICATE_NAME.toString());
+                .hasMessageContaining(Error.SHOULD_OVER_MINIMUM_ROUND.toString());
     }
 }

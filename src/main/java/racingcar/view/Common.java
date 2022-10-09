@@ -8,6 +8,6 @@ public class Common {
     }
 
     public static void printError(String message) {
-        System.out.print(message);
+        System.out.println(message);
     }
 }
