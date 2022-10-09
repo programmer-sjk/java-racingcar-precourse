@@ -10,7 +10,6 @@ public class Output {
     private static final String WINNER_STRING = "최종 우승자 : ";
     private static final String GO_FORWARD_STRING = "-";
     private static final String COMMA_JOIN_STRING = ", ";
-    private static final String EMPTY_STRING = "";
 
     public static void showRaceResult(int tryRound, CarDistance carDistance) {
         System.out.println(RACE_RESULT_STRING);

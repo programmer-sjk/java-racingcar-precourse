@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Car {
     private static final int MOVE_STANDARD_POINT = 4;
+
     private final CarName name;
     private final Distance distance;
 
